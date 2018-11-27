@@ -1,10 +1,12 @@
 # Call for Proposals (CFP) App 2.0
 
-## WARNING
+## Heart of Clojure fork
 
-This is a major upgrade from the original CFP App that is not backwards compatible.  We redesigned many of the core data models and changed how the app works. Some functionality may be unavailable to Internet Explorer 9 and earlier.
+This is a fork of the [CFP-App](https://github.com/HaughtCodeworks/cfp-app) as used by the [Heart of Clojure](https://heartofclojure.eu) conference. Changes that are generally useful and relevant we will try to submit upstream, others are local to this fork. All changes and additions are MIT licensed, like the original project.
 
-It is expected that you will install CFP App 2.0 into a new, pristine database and you will run future events on it.  If you have an existing installation of CFP App 1.0 and you want to preserve your data, you will need to handle the data migration on your own.
+Changes:
+
+- Make the SMTP host configurable. Not submitted upstream since it seems hard-coding SendGrid was a deliberate choice.
 
 ## Overview
 
