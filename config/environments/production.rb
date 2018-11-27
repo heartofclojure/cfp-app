@@ -93,11 +93,11 @@ Rails.application.configure do
   config.action_mailer.default_options = {from: ENV['MAIL_FROM']}
 
   config.action_mailer.smtp_settings = {
-      :address        => 'smtp.sendgrid.net',
+      :address        => ENV.fetch('SMTP_HOST', 'smtp.sendgrid.net'),
       :port           => '587',
       :authentication => :plain,
-      :user_name      => ENV['SENDGRID_USERNAME'],
-      :password       => ENV['SENDGRID_PASSWORD'],
+      :user_name      => ENV['SMTP_USERNAME'],
+      :password       => ENV['SMTP_PASSWORD'],
       :domain         => 'heroku.com',
       :enable_starttls_auto => true
   }
