@@ -18,7 +18,11 @@ $dark-blue: #063E5E;
 $bright-blue: #1A95DD;
 $green: #189138;
 
-$gray-base:              $black !default;
+$heart-of-clojure-gray:  #30383A;
+$heart-of-clojure-green: #6FC44E;
+$heart-of-clojure-pink:  #f4547C;
+
+$gray-base:              $heart-of-clojure-gray !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
@@ -26,11 +30,11 @@ $gray-light:             #b2afaa !default; //lighten($gray-base, 46.7%) !default
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $beige:                  #f9f6f1;
 
-$brand-primary:         $ruby-central-red !default; //darken(#428bca, 6.5%) !default; // #337ab7
-$brand-success:         $green !default;
+$brand-primary:         $heart-of-clojure-green !default; //darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         darken($heart-of-clojure-green, 20%) !default;
 $brand-info:            $bright-blue !default;
 $brand-info-alt:        $dark-blue !default;
-$brand-warning:         lighten($gold, 20%) !default ; //$dark-red;
+$brand-warning:         darken($heart-of-clojure-pink, 20%) !default ; //$dark-red;
 $brand-danger:          adjust-color($dark-red, $lightness: 30%, $saturation: 30%) !default;
 $brand-accent:          $gold !default;
 $brand-gray:            #ccc;
@@ -45,7 +49,7 @@ $body-bg:               #fff !default;
 $text-color:            $gray-dark !default;
 
 //** Global textual link color.
-$link-color:            $bright-blue !default;
+$link-color:            $heart-of-clojure-pink !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -391,7 +395,7 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $white !default;
-$navbar-default-bg:                $brand-primary !default;
+$navbar-default-bg:                $heart-of-clojure-gray !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
