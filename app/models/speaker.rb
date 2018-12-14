@@ -14,6 +14,8 @@ class Speaker < ApplicationRecord
   validates :name, :email, presence: true, unless: :skip_name_email_validation
   validates_format_of :email, with: Devise.email_regexp
 
+  validates :accept_code_of_conduct, presence: true
+
   attr_accessor :skip_name_email_validation
 
   scope :in_program, -> { Speaker.where("program_session_id IS NOT NULL") }
@@ -36,17 +38,18 @@ end
 #
 # Table name: speakers
 #
-#  id                 :integer          not null, primary key
-#  user_id            :integer
-#  event_id           :integer
-#  proposal_id        :integer
-#  program_session_id :integer
-#  speaker_name       :string
-#  speaker_email      :string
-#  bio                :text
-#  info               :text
-#  created_at         :datetime
-#  updated_at         :datetime
+#  id                     :integer          not null, primary key
+#  user_id                :integer
+#  event_id               :integer
+#  proposal_id            :integer
+#  program_session_id     :integer
+#  speaker_name           :string
+#  speaker_email          :string
+#  bio                    :text
+#  info                   :text
+#  created_at             :datetime
+#  updated_at             :datetime
+#  accept_code_of_conduct :boolean
 #
 # Indexes
 #

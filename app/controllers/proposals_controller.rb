@@ -143,7 +143,7 @@ class ProposalsController < ApplicationController
   def proposal_params
     params.require(:proposal).permit(:title, {tags: []}, :session_format_id, :track_id, :abstract, :details, :pitch, custom_fields: @event.custom_fields,
                                      comments_attributes: [:body, :proposal_id, :user_id],
-                                     speakers_attributes: [:bio, :id])
+                                     speakers_attributes: [:bio, :id, :accept_code_of_conduct])
   end
 
   def notes_params

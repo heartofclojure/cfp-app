@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180111175100) do
+ActiveRecord::Schema.define(version: 20181214145607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -159,6 +159,7 @@ ActiveRecord::Schema.define(version: 20180111175100) do
     t.text "info"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean "accept_code_of_conduct"
     t.index ["event_id"], name: "index_speakers_on_event_id"
     t.index ["program_session_id"], name: "index_speakers_on_program_session_id"
     t.index ["proposal_id"], name: "index_speakers_on_proposal_id"
