@@ -50,7 +50,7 @@
           %p Thank you for all submitted proposals!
       - elsif event.draft?
         .panel-body
-          %p The CFP has not yet opened.  
+          %p The CFP has not yet opened.
           %p Please check back soon!
 
     - if event.proposals.count > 5
@@ -60,5 +60,4 @@
         = event.line_chart
 
   .col-md-8.col-md-pull-4
-    .markdown
-      = markdown(event.guidelines)
+    = markdown(event.guidelines)
