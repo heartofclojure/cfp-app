@@ -43,13 +43,14 @@
     hint: 'Include any pertinent details such as outlines, outcomes or intended audience.'#, popover_icon: { content: details_tooltip }
 
   = f.input :pitch, input_html: { class: 'watched', rows: 5 },
-    hint: 'Explain why this talk should be considered and what makes you qualified to speak on the topic.'#, popover_icon: { content: pitch_tooltip }
+    hint: 'Tell us why people must see this talk. How will the audience benefit, what will they learn? It\'s not about you, it\'s about them!'#, popover_icon: { content: pitch_tooltip }
 
 - if event.custom_fields.any?
-  - event.custom_fields.each do |custom_field|
-    .form-group
-      = f.label custom_field
-      = text_field_tag "proposal[custom_fields][#{custom_field}]", proposal.custom_fields[custom_field], class: "form-control"
+  %fieldset
+    - event.custom_fields.each do |custom_field|
+      .form-group
+        = f.label custom_field
+        = text_field_tag "proposal[custom_fields][#{custom_field}]", proposal.custom_fields[custom_field], class: "form-control"
 
 = render partial: 'speakers/fields', locals: { f: f, event: event }
 
