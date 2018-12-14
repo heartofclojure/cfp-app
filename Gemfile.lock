@@ -111,6 +111,8 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.6.5)
+      devise (>= 4.4)
     diff-lcs (1.3)
     dotenv (2.5.0)
     dotenv-rails (2.5.0)
@@ -425,6 +427,7 @@ DEPENDENCIES
   country_select (~> 1.3.1)
   database_cleaner (~> 1.6.0)
   devise (~> 4.4.3)
+  devise-i18n
   dotenv-rails
   draper (~> 3.0.1)
   factory_bot_rails
