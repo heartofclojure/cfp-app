@@ -7,6 +7,7 @@ This is a fork of the [CFP-App](https://github.com/HaughtCodeworks/cfp-app) as u
 Changes:
 
 - Make the SMTP host configurable. Not submitted upstream since it seems hard-coding SendGrid was a deliberate choice.
+- Prevent OAuth login from redirecting to referrer, this was causing logins through Twitter to be redirected back to Twitter after authentication.
 
 ## Overview
 
