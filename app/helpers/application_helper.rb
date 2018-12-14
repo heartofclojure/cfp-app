@@ -2,7 +2,7 @@ module ApplicationHelper
 
   def title
     if @title.blank?
-      "CFPApp"
+      "Heart of Clojure — Call for Proposals"
     else
       @title
     end
