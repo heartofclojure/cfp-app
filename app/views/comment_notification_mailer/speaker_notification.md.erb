@@ -2,6 +2,4 @@
 
 > <%= simple_format(@comment.body) %>
 
-<%= md_link_to 'View your proposal', event_proposal_url(@proposal.event, uuid: @proposal) %>
-
-
+You can <%= md_link_to 'view your proposal', event_proposal_url(@proposal.event, uuid: @proposal) %> to reply to this comment or to update your proposal.
