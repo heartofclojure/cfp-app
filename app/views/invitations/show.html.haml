@@ -1,11 +1,14 @@
-.alert.alert-info.container
-  %strong Hello #{@invitation.email}!
-  You have been invited to be a speaker for the talk outlined below.
-  Would you like to participate?
+%div.container.alert-info.pv3.mv2.br3.flex.justify-between
+  %p
+    %strong Hello #{@invitation.email}!
+    You have been invited to be a speaker for the talk outlined below.
+    Would you like to participate?
 
-  .pull-right
-    = @invitation.accept_button
-    = @invitation.decline_button
+  %div.flex.items-center
+    %div
+      = @invitation.accept_button
+    %div.pl2
+      = @invitation.decline_button
 
 = render template: 'proposals/show', locals: { proposal: @proposal,
     event: @event , invitations: @proposal.invitations.not_accepted.decorate }

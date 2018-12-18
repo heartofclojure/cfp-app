@@ -14,7 +14,7 @@ class Speaker < ApplicationRecord
   validates :name, :email, presence: true, unless: :skip_name_email_validation
   validates_format_of :email, with: Devise.email_regexp
 
-  validates :accept_code_of_conduct, presence: true
+  validates :accept_code_of_conduct, presence: true, unless: :skip_name_email_validation
 
   attr_accessor :skip_name_email_validation
 
