@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
       get :info
       get :edit
+      get 'comments' => 'comments#index'
+
       patch :update
       patch 'update-status' => 'events#update_status'
       patch :open_cfp

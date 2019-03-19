@@ -1,0 +1,16 @@
+%div{ style: "margin-top: 3em"}
+  %ul.messages_layout
+    - @comments.each do |comment|
+      %li.comment.markdown{ class: choose_class_for(comment) }
+        .message_wrap
+          - if comment.user.present?
+            %div{ title: comment.created_at.to_s }
+              %p.name= commenter_name(comment)
+              %span &nbsp;
+              %span.time #{comment.created_at.to_s(:day_at_time)}
+              %span &nbsp;
+              - if comment.public?
+                %span{ style: "font-variant: small-caps" } public
+          %p{ style: "clear:both" }= Staff::ProposalDecorator.decorate(comment.proposal).title_link_for_review
+          .text
+            =markdown(comment.body)

@@ -30,6 +30,9 @@
             %li{class: nav_item_class("event-program-link")}
               = link_to event_staff_program_sessions_path(current_event) do
                 %span Program
+            %li{class: nav_item_class("event-comments-link")}
+              = link_to event_staff_comments_path(current_event) do
+                %span Comments
 
           - if schedule_nav?
             %li{class: nav_item_class("event-schedule-link")}
