@@ -76,7 +76,7 @@ class Staff::ProposalDecorator < ProposalDecorator
 
   def vote_count
     object.review_tags.select do |t|
-      %w(Bozhidar Carin Dani Saskia).include?(t)
+      %w(bozhidar carin dani saskia).include?(t)
     end.count
   end
 
