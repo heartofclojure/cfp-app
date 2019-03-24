@@ -10,6 +10,7 @@
     - if event.public_tags?
       %td= proposal.tags_labels
     %td= proposal.review_tags_labels
+    %td= proposal.vote_count
     %td
       %span.proposal-status= proposal.state_label(small: true, show_confirmed: true)
     %td

@@ -46,6 +46,7 @@
           %th
           %th
           %th
+          %th
           %th.actions
         %tr
           %th Score
@@ -54,6 +55,7 @@
           %th Track
           %th Session Format
           %th Reviewer Tags
+          %th Votes
           %th Status
           %th.actions Soft Actions (Internal)
       %tbody
@@ -65,6 +67,7 @@
             %td= proposal.track_name
             %td= proposal.session_format_name
             %td= proposal.review_tags_labels
+            %td= proposal.vote_count
             %td
               %span.proposal-status= proposal.state_label(small: true, show_confirmed: true)
             %td

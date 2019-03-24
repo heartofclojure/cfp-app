@@ -74,6 +74,12 @@ class Staff::ProposalDecorator < ProposalDecorator
     proposal.internal_comments.size + proposal.public_comments.size
   end
 
+  def vote_count
+    object.review_tags.select do |t|
+      %w(Bozhidar Carin Dani Saskia).include?(t)
+    end.count
+  end
+
   private
 
   def state_button(text, path, opts = {})
@@ -139,4 +145,5 @@ class Staff::ProposalDecorator < ProposalDecorator
   def hard_reset_button_hidden?
     object.confirmed? || !(object.finalized? && h.policy(proposal).finalize?)
   end
+
 end
